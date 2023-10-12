@@ -43,3 +43,8 @@ button.addEventListener("click", function(){
         container.className = `${colorText} ${alertDiv}`;
     }   
 })
+
+// funzione random 
+function getRndInteger(min, max){
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
