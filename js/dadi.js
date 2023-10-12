@@ -21,8 +21,8 @@ buttonNumber.addEventListener("click", function(){
     console.log(numberComputer);
     gioco.innerHTML += `
         <div>
-            User numero: ${numberUser} <br>
-            Computer numero: ${numberComputer}
+            <p class = "m-3">User numero: ${numberUser} <br>
+            Computer numero: ${numberComputer} </p>
         </div>
     `;
     let winText;
@@ -33,6 +33,8 @@ buttonNumber.addEventListener("click", function(){
     } else {
         winText = "Pareggio";
     }
-    gioco.innerHTML += winText;
+    gioco.innerHTML += `
+        <p class = "m-3"> ${winText}
+        </p>
+    `
 })
-
