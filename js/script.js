@@ -29,17 +29,17 @@ button.addEventListener("click", function(){
     for (e = 0; e < listEmail.length; e++){
         console.log(listEmail[e]);
         let checkEmail = listEmail[e];
-        let text, colorText;
+        let text, colorText, alertDiv;
         if (insertEmail === checkEmail){
-            console.log("Trovata");
-            // text = "Email corretta";
-            // colorText = "text-success";
-        } else{
-            console.log("Non trovata");
-            // text = "Email non trovata"
-            // colorText = "text-danger";
+            text = "Email corretta";
+            colorText = "text-success";
+            alertDiv = "alert-success alert";
+        } else {
+            text = "Email non trovata"
+            colorText = "text-danger";
+            alertDiv = "alert-danger alert";
         }
-        // container.innerHTML = text;
-        // container.className = colorText;
+        container.innerHTML = text;
+        container.className = `${colorText} ${alertDiv}`;
     }   
 })
