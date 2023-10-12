@@ -42,5 +42,5 @@ button.addEventListener("click", function(){
     }
     displayAlert.innerHTML = text; 
     displayAlert.classList.remove("d-none");
-    displayAlert.classList.add(buttonAlert); 
+    displayAlert.classList.toggle(buttonAlert); 
 })
