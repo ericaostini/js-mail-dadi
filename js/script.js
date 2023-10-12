@@ -23,17 +23,23 @@ const listEmail = [
     "elisaneri@hotmail.it"
 ]
 console.log(listEmail);
-for (e = 0; e < listEmail.length; e++){
-    console.log(listEmail[e]);
+const button = document.querySelector("button");
+button.addEventListener("click", function(){
     let insertEmail = document.getElementById("email").value;
-    let checkEmail = listEmail[e];
-    let text, colorText;
-    if (insertEmail === checkEmail){
-        text = "Email corretta";
-        colorText = "text-success";
-    } else{
-        text = "Email non trovata"
-        colorText = "text-danger";
-    }
-
-}   
+    for (e = 0; e < listEmail.length; e++){
+        console.log(listEmail[e]);
+        let checkEmail = listEmail[e];
+        let text, colorText;
+        if (insertEmail === checkEmail){
+            console.log("Trovata");
+            // text = "Email corretta";
+            // colorText = "text-success";
+        } else{
+            console.log("Non trovata");
+            // text = "Email non trovata"
+            // colorText = "text-danger";
+        }
+        // container.innerHTML = text;
+        // container.className = colorText;
+    }   
+})
