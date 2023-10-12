@@ -12,8 +12,23 @@ gioco.innerHTML = `
     <p> Il programma genera un numero causale per l'utente e un numero casuale per il computer, chi ha il numero più alto vince! </p>
 `;
 wrapperDadi.append(gioco);
-let numberUser = getRndInteger(1,6);
 
+let numberUser = getRndInteger(1,6);
 console.log(numberUser);
 let numberComputer = getRndInteger(1,6);
 console.log(numberComputer);
+gioco.innerHTML += `
+    <div>
+        User numero: ${numberUser} <br>
+        Computer numero: ${numberComputer}
+    </div>
+`;
+let winText;
+if (numberUser > numberComputer){
+    winText = "User vince";
+} else if (numberUser < numberComputer){
+    winText = "Computer vince";
+} else {
+    winText = "Pareggio";
+}
+gioco.innerHTML += winText;
